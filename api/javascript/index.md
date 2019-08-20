@@ -2118,6 +2118,22 @@ r.expr(2).mod(2).run(conn, callback)
 
 [Read more about this command &rarr;](mod/)
 
+## [pow](pow/) ##
+
+{% apibody %}
+number.pow(number) &rarr; number
+{% endapibody %}
+
+
+
+__Example:__ Return 10 raised to the power of 2.
+
+```js
+r.expr(10).pow(2).run(conn, callback);
+```
+
+[Read more about this command &rarr;](pow/)
+
 ## [and](and/) ##
 
 {% apibody %}
