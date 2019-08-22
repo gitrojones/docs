@@ -2174,6 +2174,134 @@ true
 
 [Read more about this command &rarr;](or/)
 
+## [bitAnd](bitwise-and/) ##
+
+{% apibody %}
+value.bitAnd(value[, value, ...]) &rarr; value
+{% endapibody %}
+
+Bitwise AND (&) the bits of two or more numbers together, returning the binary result as a number.
+
+__Example:__ 55 & 5 = 5
+
+```js
+> r.expr(55).bitAnd(5).run(conn, callback)
+// result passed to callback
+110111
+000101
+------
+000101
+IE. 5
+```
+
+[Read more about this command &rarr;](bitwise-and/)
+
+## [bitOr](bitwise-or/) ##
+
+{% apibody %}
+value.bitOr(value[, value, ...]) &rarr; value
+{% endapibody %}
+
+Bitwise OR (|) the bits of two or more numbers together, returning the binary result as a number.
+
+__Example:__ 55 | 5 = 55
+
+```js
+> r.expr(55).bitOr(5).run(conn, callback)
+// result passed to callback
+110111
+000101
+------
+110111
+IE. 55
+```
+
+[Read more about this command &rarr;](bitwise-or/)
+
+## [bitXor](bitwise-xor/) ##
+
+{% apibody %}
+value.bitXor(value[, value, ...]) &rarr; value
+{% endapibody %}
+
+Bitwise XOR (⊕) the bits of two or more numbers together, returning the binary result as a number.
+
+__Example:__ 55 ⊕ 5 = 50
+
+```js
+> r.expr(55).bitXor(5).run(conn, callback)
+// result passed to callback
+110111
+000101
+------
+110010
+IE. 50
+```
+
+[Read more about this command &rarr;](bitwise-xor/)
+
+## [bitNot](bitwise-not/) ##
+
+{% apibody %}
+value.bitNot() &rarr; value
+bitNot(number) %rarr; value
+{% endapibody %}
+
+Bitwise NOT (~) the bits of a number together, returning the one's complement of that number.
+
+__Example:__ 55 ~ 5 = -56
+
+```js
+> r.expr(55).bitNot().run(conn, callback)
+// result passed to callback
+11 0111
+-------
+00 1000
+IE. -56
+```
+
+[Read more about this command &rarr;](bitwise-not/)
+
+## [bitSal](bitwise-sal/) ##
+
+{% apibody %}
+value.bitSal(number) &rarr; value
+bitSal(number, number) %rarr; value
+{% endapibody %}
+
+Bitwise Shift Left (<<) the bits of one number with another, returning the shifted result of those numbers.
+
+__Example:__ 55 << 5 = 1760
+
+```js
+> r.expr(55).bitSal(5).run(conn, callback)
+// result passed to callback
+110111 << 5 -> 11011100000
+IE. 1760
+```
+
+[Read more about this command &rarr;](bitwise-sal/)
+
+## [bitSar](bitwise-sar/) ##
+
+{% apibody %}
+value.bitSar(number) &rarr; value
+bitSar(number, number) %rarr; value
+{% endapibody %}
+
+Bitwise Shift Right (>>) the bits of one number with another, returning the shifted result of those numbers.
+
+__Example:__ 55 >> 5 = 1
+
+```js
+> r.expr(55).bitSar(5).run(conn, callback)
+// result passed to callback
+110111 >> 5 -> 000001
+IE. 1
+```
+
+[Read more about this command &rarr;](bitwise-sar/)
+
 ## [eq](eq/) ##
 
 {% apibody %}
